@@ -1,0 +1,22 @@
+{/* The code below includes your Project ID (P32Q8fxZ2F3jwhh2hJl7fUjwmdWc) */}
+<AuthProvider projectId="P32Q8fxZ2F3jwhh2hJl7fUjwmdWc">
+	<Descope
+		flowId="sign-up-or-in"
+		theme="light"
+		onSuccess={(e) => {
+			console.log(e.detail.user.name)
+			console.log(e.detail.user.email)
+		}}
+		onError={(err) => {
+			console.log("Error!", err)
+		}}
+	/>
+</AuthProvider>
+
+// Use the code below to add the session validation to your server application.
+// More info: https://docs.descope.com/build/guides/session
+const authInfo =
+	await descopeClient.validateSession(session_token);
+
+
+ProjectID P32Q8fxZ2F3jwhh2hJl7fUjwmdWc
